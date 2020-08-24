@@ -5,40 +5,51 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Location } from '@reach/router';
+import "../styles.scss";
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./Navigation/header"
+import NavScreen from "./Navigation/navigation";
 
 const Layout = ({ children }) => {
+  const [navActive, setNavActive] = useState(false);
+  const [headerActive, setHeaderActive] = useState(true);
+  const target = React.createRef();
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
-        }
+        } 
       }
     }
   `)
 
+  const toggleNav = () => {
+    console.log(navActive);
+    setNavActive(!navActive);
+  }
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <Header 
+        siteTitle={data.site.siteMetadata.title} 
+        navActive={navActive}
+        onToggleNav={toggleNav}
+        target={target}
+        headerActive={headerActive}
+      />
+      <NavScreen 
+        key={navActive}
+        navActive={navActive} 
+        onToggleNav={toggleNav} 
+      />
+      <div>
+        <main className={!!headerActive ? "main" : "main--no-header"}>{children}</main>
+        <footer></footer>
       </div>
     </>
   )

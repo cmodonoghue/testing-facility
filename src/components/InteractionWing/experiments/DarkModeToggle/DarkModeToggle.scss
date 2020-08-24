@@ -1,0 +1,71 @@
+.dark-mode-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+
+  &.dark {
+    background-color: #2e2e34;
+
+    & .toggle {
+      background: linear-gradient(62.83deg, #4e4156 7.21%, #6d5063 92.13%);
+    }
+
+    & .circle {
+      // visibility: hidden;
+      background-color: #fff;
+    }
+
+    & .night {
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+    }
+  }
+
+  .toggle {
+    width: 24rem;
+    height: 12rem;
+    border-radius: 25rem;
+    background: linear-gradient(296.72deg, #92a7ef 6.53%, #a2d2fe 91.67%);
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .toggle:hover {
+    cursor: pointer;
+  }
+  
+  .circle {
+    background-color: #ffffef;
+    border-radius: 50rem;
+    height: 8rem;
+    width: 8rem;
+    justify-self: flex-start;
+  }
+  
+  .night {
+    display: none;
+  }
+  
+  .day {
+    display: none;
+  }
+  
+  &:not(.dark) .day {
+    display: flex;
+    flex: 2;
+  }
+  
+  .trees {
+    margin: 2rem auto;
+  }
+  
+  .stars {
+  }
+  
+}

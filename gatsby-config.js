@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Animation Testing Facility`,
+    description: `we test animation here.`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -27,6 +27,24 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Cabin`,
+            variants: [`400`, `400i`, `700`, `700i`]
+          },
+          {
+            family: `Reem Kufi`,
+            variants: [`400`]
+          },
+        ],
+        display: 'swap'
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

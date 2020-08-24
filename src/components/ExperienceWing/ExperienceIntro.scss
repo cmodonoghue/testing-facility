@@ -1,0 +1,27 @@
+.experience-intro {
+  scroll-snap-align: start;
+  padding: 14rem 12rem;
+  margin-bottom: 4rem;
+  height: 100vh;
+}
+
+.experience-title {
+  font-size: 6.4rem;
+  text-align: center;
+  background: linear-gradient(to right bottom, $color-purple-1, $color-purple-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 3rem;
+}
+
+.experience-subtitle {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.experience-scroll-text {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+}

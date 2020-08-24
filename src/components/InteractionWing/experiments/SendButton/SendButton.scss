@@ -1,0 +1,116 @@
+.send-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  .btn {
+    background-color: #B87474;
+    height: 14rem;
+    width: 14rem;
+    /* box-shadow: inset 0px 0px 0px 8px #fff; */
+    /* border: 12px solid #B87474; */
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+  }
+  
+  .btn:active {
+    background: #9E5858;
+    border-color: #9E5858;
+    transition: 0.3s ease;
+  }
+  
+  .plane {
+    transition: 0.3s ease-in-out;
+    margin: auto;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .checkmark {
+    position: absolute;
+    visibility: hidden;
+    left: 6rem;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .checkmark {
+      left: 1;
+    }
+  }
+  
+  .send-text {
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+    font-size: 5.6rem;
+    margin-left: 3rem;
+    right: 6.4rem;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .send-text {
+      display: none;
+    }
+  }
+  
+  .wind {
+    position: absolute;
+    right: -25rem;
+    top: 1rem;
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 5rem);
+    grid-column-gap: 8rem;
+    grid-template-rows: repeat(8, 2.2rem);
+    z-index: 0;
+  }
+  
+  .wind2 {
+    right: -50rem;
+  }
+  
+  .wind3 {
+    right: -75rem;
+  }
+   
+  .particle {
+    width: 30px;
+    height: 3px;
+    background-color: #9BD6E9;
+  }
+  
+  .pos2 {
+    margin-left: 6rem;
+  }
+  
+  .pos3 {
+    margin-left: 12rem;
+  }
+  
+  .pos4 {
+    margin-left: 6rem;
+  }
+  
+  .reset {
+    font-size: 2.4rem;
+    margin-top: 3rem;
+    color: #424040;
+    visibility: hidden;
+  }
+  
+  .reset:hover {
+    cursor: pointer;
+  }
+}

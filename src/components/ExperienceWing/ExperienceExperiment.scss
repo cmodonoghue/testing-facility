@@ -1,0 +1,12 @@
+.experience-item {
+  height: 100vh;
+  scroll-snap-align: start;
+
+  &.blue {
+    background-color: #637795;
+  }
+
+  &.red {
+    background-color: #956366;
+  }
+}

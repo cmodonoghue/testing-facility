@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before  {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+} 
+
+$color-black: #484D51;
+$color-gray: #CBDFEB;
+$color-gray-light: #EFF4F6;
+$color-gray-dark: #748A97;
+$color-navy: #202D59;
+$color-navy-light: #2B3B6E;
+$color-red-1: #EF57A0;
+$color-red-2: #DA3361;
+$color-blue-1: #58C4F2;
+$color-blue-2: #57A1E5;
+$color-green-1: #44C951;
+$color-green-2: #2BB614;
+$color-purple-1: #A181FF;
+$color-purple-2: #7C72F5;
+$color-gold-1: #F9AE3E;
+$color-gold-2: #F47026;
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font-family: 'Cabin';
+  font-size: 1.6rem;
+  color: $color-black;
+}
+
+.main {
+  margin-top: 9.6rem;
+
+  &--no-header {
+    margin-top: 0;
+  }
+}
+
+ul,li {
+  list-style: none;
+}
+
+a, a:visited {
+  text-decoration: none;
+  cursor: auto;
+  color: inherit;
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+}
+
+.homepage {
+  height: calc(100vh - 9.6rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-title {
+    font-size: 4.8rem;
+    margin-bottom: 3rem;
+  }
+
+  &-subtitle {
+    font-size: 3.6rem;
+    font-weight: 400;
+    margin-bottom: 8rem;
+    font-style: italic;
+  }
+
+  &-nav {
+    &__text {
+      font-size: 3.6rem;
+      background-image: linear-gradient(to bottom, #fff 50%, #B2E6FC 50%);
+      background-size: 100% 200%;
+      transition: background-position ease-out 0.2s;
+    }
+    &__underline {
+      width: 100%;
+      height: 0.9rem;
+      background-color: #B2E6FC;
+      z-index: -1;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .homepage-nav__text {
+        background-position: 0 100%;
+      }
+    }
+  }
+}

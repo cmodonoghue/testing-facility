@@ -1,0 +1,22 @@
+.interaction-intro {
+  padding: 8rem 12rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 1500px) {
+  .interaction-intro {
+    padding: 8rem 16rem;
+  }
+}
+
+.interaction-title {
+  font-size: 6.4rem;
+  background: linear-gradient(to right bottom, $color-red-1, $color-red-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 3rem;
+}
+
+.interaction-subtitle {
+  font-weight: 400;
+}

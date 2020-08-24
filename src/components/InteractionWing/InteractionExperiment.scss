@@ -1,0 +1,55 @@
+.interaction-item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 6rem;
+
+  &-details {
+    background-color: $color-gray-light;
+    width: 50%;
+    padding: 6rem 6rem 6rem 10rem;
+    font-size: 2.4rem;
+
+    &__id {
+      font-weight: 400;
+      color: $color-gray-dark;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    &__name {
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+
+    &__status {
+      color: $color-green-2;
+      margin-left: 2rem;
+      font-size: 2.4rem;
+    }
+
+    &__desc {
+      margin: 6rem 0;
+      font-size: 2.1rem;
+    }
+
+    &__link {
+      color: $color-gray-dark !important;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1500px) {
+    &-details {
+      padding: 6rem 6rem 6rem 16rem;
+    }
+  }
+
+  &-experiment {
+    width: 50%;
+  }
+}

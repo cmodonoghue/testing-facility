@@ -1,0 +1,173 @@
+.nav {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  opacity: 1;
+  left: 0;
+  top: 9rem;
+  background-color: $color-navy;
+
+  &--inactive {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100%;
+    margin-top: 6rem;
+  }
+
+  &-col {
+    // background-color: $color-navy-light;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // justify-content: space-evenly;
+
+    &--left, &--right {
+      margin-top: 6rem;
+    }
+
+    &--mid > .nav-card {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &-card {
+    width: 30rem;
+    height: 6rem;
+    background: linear-gradient(to right bottom, $color-blue-1, $color-blue-2);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 7rem;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+      transition: ease-in-out 0.2s;
+    }
+
+    &--construction {
+      filter: brightness(.5);
+
+      &:hover {
+        cursor: pointer;
+        transform: none;
+      }
+    }
+
+    &--interaction {
+      background: linear-gradient(to right bottom, $color-red-1, $color-red-2);
+      animation-duration: 0.6s;
+      animation-name: slideInUp;
+      animation-timing-function: ease-out;
+    }
+
+    &--experience {
+      background: linear-gradient(to right bottom, $color-purple-1, $color-purple-2);
+      animation-duration: 0.9s;
+      animation-name: slideInUp;
+      animation-timing-function: ease-out;
+    }
+
+    &--loading {
+      background: linear-gradient(to right bottom, $color-green-1, $color-green-2);
+      animation-duration: 1.2s;
+      animation-name: slideInUp;
+      animation-timing-function: ease-out;
+    }
+
+    &--illustration {
+      background: linear-gradient(to right bottom, $color-blue-1, $color-blue-2);
+      animation-duration: 0.9s;
+      animation-name: slideInUp;
+      animation-timing-function: ease-out;
+    }
+
+    &--secret {
+      background: linear-gradient(to right bottom, $color-gold-1, $color-gold-2);
+      animation-duration: 1.5s;
+      animation-name: slideInUp;
+      animation-timing-function: ease-out;
+    }
+  }
+
+  &-description {
+    opacity: 1;
+    background-color: #fff;
+    width: 120%;
+    height: 27rem;
+    border-radius: 1rem;
+    border-top: 2rem solid #fff;
+    transition: 0.3s ease-in-out;
+    padding: 2rem;
+
+    &--inactive{
+      opacity: 0;
+
+      & > .nav-description__headline {
+        display: none;
+      }
+
+      & > .nav-description__content {
+        display: none;
+      }
+    }
+
+    &--interaction {
+      border-color: $color-red-1;
+    }
+
+    &--illustration {
+      border-color: $color-blue-1;
+    }
+
+    &--experience {
+      border-color: $color-purple-1;
+    }
+
+    &--loading {
+      border-color: $color-green-1;
+    }
+
+    &--secret {
+      border-color: $color-gold-1;
+    }
+
+    &__headline {
+      color: $color-black;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+
+    &__content {
+      color: $color-gray-dark;
+      font-size: 2.1rem;
+    }
+
+    &__construction {
+      margin-top: 2rem;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: $color-red-2;
+      &--inactive {
+        display: none;
+      }
+    }
+  }
+}
