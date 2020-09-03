@@ -1,11 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import gsap from 'gsap';
 
 const SendButton = () => {
   const [sending, setSending] = useState(false);
-  useEffect(() => {
-    const mobile = window.matchMedia('(max-width: 600px)');
-  })
+  let mobile = false;
+  if (typeof window !== 'undefined') {
+    mobile = window.matchMedia('(max-width: 600px)');
+  }
+  const isBrowser = typeof window !== `undefined`;
   let isSent = true;
   const btn = useRef();
   const plane = useRef();

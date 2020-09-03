@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
   const [navActive, setNavActive] = useState(false);
   const [headerActive, setHeaderActive] = useState(true);
   const target = React.createRef();
+  const test = 'hi';
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -48,7 +49,7 @@ const Layout = ({ children }) => {
         onToggleNav={toggleNav} 
       />
       <div>
-        <main className={!!headerActive ? "main" : "main--no-header"}>{children}</main>
+        <main className={!!headerActive ? "main" : "main--no-header"}>{children({toggleNav})}</main>
         <footer></footer>
       </div>
     </>

@@ -7,8 +7,14 @@ import ExperienceWing from "../components/ExperienceWing/ExperienceWing";
 
 const Experience = () => (
   <Layout>
-    <SEO title="Experience Wing" />
-    <ExperienceWing />
+    {
+        props => (
+          <div>
+            <SEO title="Experience Wing" />
+            <ExperienceWing />
+          </div>
+        )
+      }    
   </Layout>
 )
 

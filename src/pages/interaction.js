@@ -8,8 +8,14 @@ import InteractionWing from "../components/InteractionWing/InteractionWing";
 
 const Interaction = () => (
   <Layout toggleNav>
-    <SEO title="Interaction Wing" />
-    <InteractionWing />  
+      {
+        props => (
+          <div>
+            <SEO title="Interaction Wing" />
+            <InteractionWing />
+          </div>
+        )
+      }         
   </Layout>
 )
 
